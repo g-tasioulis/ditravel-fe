@@ -4,6 +4,7 @@ import { IoPerson } from "react-icons/io5";
 import NextLink from "next/link";
 import React from "react";
 import "./navbar.css";
+import { NavItemProps } from "@/interfaces/componentInterfaces";
 
 const Navbar = () => {
   return (
@@ -72,7 +73,7 @@ const Navbar = () => {
   );
 };
 
-const NavItem = ({ href, children }) => (
+const NavItem: React.FC<NavItemProps> = ({ href, children }) => (
   <NextLink href={href} passHref>
     <Link mx={2} fontWeight="semibold" _hover={{ color: "gray.500" }}>
       {children}
