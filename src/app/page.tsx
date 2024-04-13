@@ -1,137 +1,143 @@
-import Image from "next/image";
-import acropolis from "../../public/home1.jpg";
-import parthenon from "../../public/parthenon.jpg";
-import im1 from "../../public/Group-42.webp";
-import im2 from "../../public/Group-471-1.webp";
-import im3 from "../../public/Group-471.webp";
-import im4 from "../../public/Group-472.webp";
-import im5 from "../../public/Group-474.webp";
+import {
+  Box,
+  Button,
+  Flex,
+  Image as ChakraImage,
+  Text,
+  Grid,
+} from "@chakra-ui/react";
 
 export default function Home() {
   return (
     <main className="home" style={{ paddingTop: "5%" }}>
-      <div className="container flex flex-wrap justify-between">
-        <div className="w-full md:w-1/2 lg:w-2/3 pr-8 flex items-center">
-          <div className="pl-10">
-            <h2
-              className="text-4xl font-bold mb-4"
-              style={{ color: "#2E1630" }}
-            >
-              Explore Greece Discover the most famous sites of Ancient Greece:
-            </h2>
-            <p className="text-xl" style={{ color: "#2E1630" }}>
-              Archaeological sites like the Acropolis of Athens, Sanctuary of
-              Delphi, Ancient Olympia, Delos island, Palace of Knossos in Crete,
-              Ancient Epidaurus and Mycenae.
-            </p>
-            <div className="flex justify-center mt-4">
-              <button className="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg shadow">
-                <div className="absolute inset-0 w-3 bg-red-700 transition-all duration-[250ms] ease-out group-hover:w-full"></div>
-                <span className="relative text-black group-hover:text-white">
-                  Explore
-                </span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 flex justify-end pl-10">
-          <Image src={acropolis} alt="acropolis" />
-        </div>
-      </div>
-      <div
-        className="container flex flex-wrap justify-between "
-        style={{ paddingTop: "10%" }}
-      >
-        <div className="w-full md:w-1/2 lg:w-2/3 pr-8 flex items-center">
-          <div className="pl-10">
-            <h2
-              className="text-4xl font-bold mb-4"
-              style={{ color: "#2E1630" }}
-            >
-              FIVE REASONS WHY YOU SHOULD VISIT GREEK ARCHAEOLOGICAL SITES:
-            </h2>
-            <p className="text-xl" style={{ color: "#2E1630" }}>
-              Greece is filled with rich ancient history that will leave you
-              mesmerized. With lots of archeological structures, Greece has more
-              than 18 UNESCO Heritage-listed sites. If you’re a history lover or
-              not, take the time to visit the Acropolis, open-air museum of
-              Dolos, Parthenon, Temple of Olympian – Zeus to name a few
-            </p>
-          </div>
-        </div>
-        <div className="w-full sm:w-1/2 md:w-1/2 lg:w-1/3 flex justify-end pl-10">
-          <Image src={parthenon} alt="acropolis" />
-        </div>
-      </div>
-      <div className="pt-20">
-        <div
-          className="container flex justify-center items-center"
-          style={{
-            width: "60%",
-            height: "60%",
-            marginLeft: "17%",
-            backgroundColor: "#FFE1D5",
-            borderRadius: "20px",
-          }}
+      <Box>
+        <Box>
+          <Flex justifyContent="center">
+            <Box maxW={{ base: "100%", lg: "2/3" }} w="100%">
+              <Flex alignItems="center">
+                <Box mr={{ base: 0, lg: "20%" }} pl={40}>
+                  <Text fontSize="4xl" fontWeight="bold" mb={4} color="#2E1630">
+                    Explore Greece Discover the most famous sites of Ancient
+                    Greece:
+                  </Text>
+                  <Text fontSize="xl" color="#2E1630">
+                    Archaeological sites like the Acropolis of Athens, Sanctuary
+                    of Delphi, Ancient Olympia, Delos island, Palace of Knossos
+                    in Crete, Ancient Epidaurus and Mycenae.
+                  </Text>
+                  <Flex justifyContent="center" mt={4}>
+                    <Button
+                      className="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg shadow"
+                      _hover={{ ".bg-red-700": { width: "full" } }}
+                    >
+                      <Box className="absolute inset-0 w-3 bg-red-700 transition-all duration-[250ms] ease-out group-hover:w-full"></Box>
+                      <Text className="relative text-black group-hover:text-white">
+                        Explore
+                      </Text>
+                    </Button>
+                  </Flex>
+                </Box>
+                <Box style={{ paddingRight: "15%" }}>
+                  <ChakraImage src={"/home1.jpg"} alt="acropolis" />
+                </Box>
+              </Flex>
+            </Box>
+          </Flex>
+        </Box>
+      </Box>
+      <Box style={{ paddingTop: "5%" }}>
+        <Box
+          border="1px solid #E2E8F0"
+          p={2}
+          maxWidth="1200px"
+          mx="auto"
+          bg="#E6CAC9"
+          style={{ borderRadius: "5%" }}
         >
-          <div className="container flex flex-wrap justify-between p-4 rounded-xl">
-            <div className="w-full lg:w-2/3 flex flex-wrap items-center">
-              <div className="w-full lg:w-1/3">
-                <div className="elementor-element elementor-element-8989e9a">
-                  <Image src={im2} alt="2" />
-                </div>
-                <div className="elementor-element elementor-element-58b671e mt-4 lg:mt-0">
-                  <Image src={im4} alt="2" />
-                </div>
-                <div className="elementor-element elementor-element-ee50481 mt-4 lg:mt-0">
-                  <Image src={im3} alt="3" />
-                </div>
-              </div>
-              <div className="w-full lg:w-2/3 lg:pl-10">
-                <h2
-                  className="text-xl font-bold mb-4 pt-5"
-                  style={{ color: "#2E1630", fontSize: "30px" }}
-                >
-                  WHY CHOOSE US
-                </h2>
-                <ul
-                  className="list-disc ml-4"
-                  style={{ color: "#2E1630", fontSize: "25px" }}
-                >
-                  <li>
-                    Affordable Price Guarantee
-                    <br />
-                    Discover Greek archaeological sites without breaking the
-                    bank, with our unbeatable tour deals
-                  </li>
-                  <li>
-                    High Qualified Services
-                    <br />
-                    We design guided tour experiences that provide comfort and
-                    convenience
-                  </li>
-                  <li>
-                    Wide variety of options
-                    <br />
-                    We design guided tour experiences that provide comfort and
-                    convenience
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="hidden lg:flex lg:flex-col lg:justify-between lg:w-1/3">
-              <div className="flex-grow mb-4">
-                <div className="elementor-element elementor-element-8989e9a">
-                  <Image src={im1} alt="1" />
-                </div>
-              </div>
-              <div className="flex-grow pt-40">
-                <Image src={im5} alt="5" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+          <Grid templateColumns="1fr 2fr 1fr">
+            <Box style={{ paddingLeft: "20%" }}>
+              <ChakraImage src={"/Group-471-1.webp"} alt="2" />
+              <ChakraImage src={"/Group-472.webp"} alt="4" mt={2} />
+              <ChakraImage src={"/Group-471.webp"} alt="3" mt={2} />
+              {/* Add your new photo here */}
+            </Box>
+            <Box className="pl-4" ml={100}>
+              <Text
+                className="text-3"
+                maxW="500px"
+                style={{ color: "#2E1630", fontSize: 30 }}
+                color="#2E1630"
+              >
+                FIVE REASONS WHY YOU SHOULD VISIT GREEK ARCHAEOLOGICAL SITES:
+              </Text>
+
+              <Text
+                className="text-xl"
+                color="#2E1630"
+                maxW="400px"
+                style={{ color: "#2E1630", fontSize: 23 }}
+              >
+                Greece is filled with rich ancient history that will leave you
+                mesmerized. With lots of archaeological structures, Greece has
+                more than 18 UNESCO Heritage-listed sites. If you’re a history
+                lover or not, take the time to visit the Acropolis, open-air
+                museum of Delos, Parthenon, Temple of Olympian – Zeus to name a
+                few.
+              </Text>
+            </Box>
+            <Box>
+              <ChakraImage
+                src="/Group-42.webp"
+                alt="5"
+                mt={2}
+                style={{ marginTop: "10%", marginLeft: "30%" }}
+              />
+            </Box>
+            <ChakraImage
+              src="/Group-474.webp"
+              alt="5"
+              mt={2}
+              style={{ marginTop: "-30%", marginLeft: "180%" }}
+            />
+          </Grid>
+        </Box>
+
+        <Box className="grid grid-cols-2 pt-20">
+          <Box
+            className="w-full md:w-1/2 lg:full items-center mx-auto"
+            style={{ marginRight: "10%" }}
+          >
+            <Box
+              className="aa"
+              style={{
+                backgroundColor: "#e6e8ea",
+                borderRadius: "10px",
+                justifyContent: "center",
+                textAlign: "center",
+              }}
+            >
+              <Text className="text-4xl font-bold mb-4" color="#2E1630">
+                PORT & AIRPORT TRANSFERS
+              </Text>
+              <Text className="text-xl" color="#2E1630">
+                We know that finding a taxi service in a foreign country can be
+                difficult and stressful. Schedule your transfer and enjoy the
+                best service with all inclusive, no surprises. The driver will
+                pick you up directly from the airport terminal or the port, will
+                help with your luggage and take you directly to your hotel or
+                any other destination, and vice versa.
+              </Text>
+            </Box>
+          </Box>
+          <Box className="w-full sm:w-1/2 md:w-1/2 justify-end">
+            <ChakraImage
+              src={"/car.png"}
+              alt="car"
+              style={{ borderRadius: "10px", height: "90%" }}
+            />
+          </Box>
+        </Box>
+      </Box>
     </main>
   );
 }
