@@ -138,6 +138,140 @@ export default function Home() {
           </Box>
         </Box>
       </Box>
+      <Box
+        style={{
+          paddingTop: "5%",
+          justifyContent: "center",
+          textAlign: "center",
+        }}
+      >
+        <Grid templateColumns="1fr 2fr 1fr">
+          <Box
+            className="w-full md:w-1/2 lg:full items-center mx-auto"
+            style={{ marginLeft: "50%" }}
+          >
+            <Box className="w-full sm:w-1/2 md:w-1/2 justify-end">
+              <ChakraImage
+                src={"/Group-480.webp"}
+                alt="car"
+                style={{
+                  borderRadius: "10px",
+                  height: "100%",
+                  marginLeft: "50%",
+                }}
+              />
+            </Box>
+            <Box
+              className="aa"
+              style={{
+                borderRadius: "10px",
+                justifyContent: "center",
+                textAlign: "center",
+              }}
+            >
+              <Text className="text-4xl font-bold mb-4" color="#2E1630">
+                Fixed Rates
+              </Text>
+              <Text className="text-xl" color="#2E1630">
+                We are much cheaper than the local ‘on-the-meter’ taxis in
+                Europe.
+              </Text>
+            </Box>
+          </Box>
+          <Box
+            className="w-full md:w-1/2 lg:full items-center mx-auto"
+            style={{ marginRight: "25%" }}
+          >
+            <Box className="w-full sm:w-1/2 md:w-1/2 justify-end">
+              <ChakraImage
+                src={"/Group-476.webp"}
+                alt="car"
+                style={{
+                  borderRadius: "10px",
+                  height: "100%",
+                  marginLeft: "70%",
+                }}
+              />
+            </Box>
+            <Box
+              className="aa"
+              style={{
+                borderRadius: "10px",
+                justifyContent: "center",
+                textAlign: "center",
+              }}
+            >
+              <Text className="text-4xl font-bold mb-4" color="#2E1630">
+                No Stress
+              </Text>
+              <Text className="text-xl" color="#2E1630">
+                As your driver will be waiting for you or pick you up from a
+                meeting point of your choice
+              </Text>
+            </Box>
+          </Box>
+          <Box
+            className="w-full md:w-1/2 lg:full items-center mx-auto"
+            style={{ marginRight: "50%" }}
+          >
+            <Box className="w-full sm:w-1/2 md:w-1/2 justify-end">
+              <ChakraImage
+                src={"/Group-477.webp"}
+                alt="car"
+                style={{
+                  borderRadius: "10px",
+                  height: "100%",
+                  marginLeft: "50%",
+                }}
+              />
+            </Box>
+            <Box
+              className="aa"
+              style={{
+                borderRadius: "10px",
+                justifyContent: "center",
+                textAlign: "center",
+              }}
+            >
+              <Text className="text-4xl font-bold mb-4" color="#2E1630">
+                Quality Vehicles
+              </Text>
+              <Text className="text-xl" color="#2E1630">
+                We offer safe transfer services, as we only work with new,
+                well-maintained cars in our fleet.
+              </Text>
+            </Box>
+          </Box>
+        </Grid>
+        <Button
+          className="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg shadow"
+          _hover={{ ".bg-red-700": { width: "full" } }}
+        >
+          <Box className="absolute inset-0 w-3 bg-red-700 transition-all duration-[250ms] ease-out group-hover:w-full"></Box>
+          <Text className="relative text-black group-hover:text-white">
+            Book Now
+          </Text>
+        </Button>
+      </Box>
+      <Box
+        style={{
+          paddingLeft: "20%",
+          justifyContent: "center",
+          textAlign: "center",
+        }}
+      >
+        <ChakraImage src={"/Group-4751.webp"} />
+        <Button
+          className="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg shadow"
+          _hover={{ ".bg-red-700": { width: "full" } }}
+          style={{ marginRight: "20%", marginBottom: "5%" }}
+        >
+          <Box className="absolute inset-0 w-3 bg-red-700 transition-all duration-[250ms] ease-out group-hover:w-full"></Box>
+          <Text className="relative text-black group-hover:text-white">
+            Get Your Offer
+          </Text>
+        </Button>
+      </Box>
     </main>
   );
 }

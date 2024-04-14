@@ -133,6 +133,7 @@ const Footer = () => {
               </div>
               <div className="w-full md:w-10/12 lg:w-8/12 xl:w-6/12 mt-16 md:mt-auto sm:mt-0 space-y-7 text-center md:text-left md:w-5/12 px-15 sm:absolute sm:left-0 sm:bottom-0 block text-gray-300">
                 <p>© 2024 Ditravel. All rights reserved.</p>
+                <p>Travel Agency License Number: 0206Ε70000649301</p>
               </div>
             </div>
           </div>
