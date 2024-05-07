@@ -44,3 +44,17 @@
     transform: scale(0.8);
   }
 }
+/* Add this to your footer.css */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+}
+
+.footer {
+  margin-top: auto;
+}

@@ -1,0 +1,13 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+@media (max-width: 768px) {
+  .tour-column {
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+.hover-effect:hover {
+  background-color: #f3f4f6;
+}

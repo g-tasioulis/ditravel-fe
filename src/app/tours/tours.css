@@ -1,0 +1,22 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.tab {
+  position: relative;
+}
+
+.tab::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+.tab:hover::after {
+  background-color: black;
+}

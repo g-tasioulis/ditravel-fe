@@ -19,10 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body style={{ display: "flex", flexDirection: "column" }}>
         <ChakraProvider>
-          <Navbar />
-          {children}
+          <div style={{ flex: 1 }}>
+            <Navbar />
+            {children}
+          </div>
           <Footer />
         </ChakraProvider>
       </body>
