@@ -1,8 +1,5 @@
 import ButtonHover from "@/components/ButtonHover";
-import { Box, Grid, GridItem, Text } from "@chakra-ui/react";
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import TravelCard from "./TravelCard";
 import { IMultiDayTour, IOneDayTour } from "@/firebase/dbschema";
 import { multiDayTours, oneDayTours } from "@/firebase/home/dbquery";
 import "./tours.css";
