@@ -33,7 +33,13 @@ export interface IMultiDayTour {
   name: string;
   peopleCostLimit?: number;
   smallDesc: string;
+  extendedDesc: string;
 }
+
+export type TourTypeMap = {
+  oneDayTours: IOneDayTour;
+  multiDayTours: IMultiDayTour;
+};
 
 export interface ITransfers {
   cost: number;

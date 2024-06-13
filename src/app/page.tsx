@@ -9,7 +9,7 @@ import {
   Text,
   Grid,
 } from "@chakra-ui/react";
-import { oneDayTours } from "@/firebase/home/dbquery";
+import { oneDayTours } from "@/firebase/queries/dbquery";
 import { useEffect, useState } from "react";
 import { IOneDayTour } from "@/firebase/dbschema";
 import { Carousel } from "@material-tailwind/react";
@@ -103,7 +103,6 @@ export default function Home() {
               <ChakraImage src={"/Group-471-1.webp"} alt="2" />
               <ChakraImage src={"/Group-472.webp"} alt="4" mt={2} />
               <ChakraImage src={"/Group-471.webp"} alt="3" mt={2} />
-              {/* Add your new photo here */}
             </Box>
             <Box className="pl-4" ml={100}>
               <Text
@@ -112,21 +111,64 @@ export default function Home() {
                 style={{ color: "#2E1630", fontSize: 30 }}
                 color="#2E1630"
               >
-                FIVE REASONS WHY YOU SHOULD VISIT GREEK ARCHAEOLOGICAL SITES:
+                WHY CHOOSE US
               </Text>
-
+              <br />
               <Text
                 className="text-xl"
                 color="#2E1630"
                 maxW="400px"
                 style={{ color: "#2E1630", fontSize: 23 }}
               >
-                Greece is filled with rich ancient history that will leave you
-                mesmerized. With lots of archaeological structures, Greece has
-                more than 18 UNESCO Heritage-listed sites. If youâre a history
-                lover or not, take the time to visit the Acropolis, open-air
-                museum of Delos, Parthenon, Temple of Olympian â Zeus to name a
-                few.
+                01. Affordable Price Guarantee
+              </Text>
+              <br />
+              <Text
+                className="text-xl"
+                color="#2E1630"
+                maxW="400px"
+                style={{ color: "#2E1630", fontSize: 23 }}
+              >
+                Discover greek archaeological sites without breaking the bank,
+                with our unbeatable tour deals
+              </Text>
+              <br />
+              <Text
+                className="text-xl"
+                color="#2E1630"
+                maxW="400px"
+                style={{ color: "#2E1630", fontSize: 23 }}
+              >
+                02. High Qualified Services
+              </Text>
+              <br />
+              <Text
+                className="text-xl"
+                color="#2E1630"
+                maxW="400px"
+                style={{ color: "#2E1630", fontSize: 23 }}
+              >
+                We design guided tour experiences that provide comfort and
+                convenience
+              </Text>
+              <br />
+              <Text
+                className="text-xl"
+                color="#2E1630"
+                maxW="400px"
+                style={{ color: "#2E1630", fontSize: 23 }}
+              >
+                03. Affordable Price Guarantee
+              </Text>
+              <br />
+              <Text
+                className="text-xl"
+                color="#2E1630"
+                maxW="400px"
+                style={{ color: "#2E1630", fontSize: 23 }}
+              >
+                Discover greek archaeological sites without breaking the bank,
+                with our unbeatable tour deals
               </Text>
             </Box>
             <Box>
@@ -137,12 +179,34 @@ export default function Home() {
                 style={{ marginTop: "10%", marginLeft: "30%" }}
               />
             </Box>
-            <ChakraImage
-              src="/Group-474.webp"
-              alt="5"
-              mt={2}
-              style={{ marginTop: "-30%", marginLeft: "180%" }}
-            />
+            <Box position="relative" display={{ base: "none", md: "block" }}>
+              <ChakraImage
+                src="/Group-474.webp"
+                alt="5"
+                mt={2}
+                style={{
+                  position: "absolute",
+                  bottom: "0",
+                  left: "150%",
+                  marginRight: "20px",
+                  marginBottom: "20px",
+                }}
+              />
+            </Box>
+            <Box position="relative" display={{ base: "block", md: "none" }}>
+              <ChakraImage
+                src="/Group-474.webp"
+                alt="5"
+                mt={2}
+                style={{
+                  position: "absolute",
+                  bottom: "0",
+                  left: "20%",
+                  marginRight: "20px",
+                  marginBottom: "20px",
+                }}
+              />
+            </Box>
           </Grid>
         </Box>
         <div className="flex justify-center items-center bg-white min-h-screen">
@@ -176,11 +240,8 @@ export default function Home() {
           textAlign: "center",
         }}
       >
-        <Grid templateColumns="1fr 2fr 1fr">
-          <Box
-            className="w-full md:w-1/2 lg:full items-center mx-auto"
-            style={{ marginLeft: "50%" }}
-          >
+        <Grid templateColumns={{ base: "1fr", md: "1fr 2fr 1fr" }}>
+          <Box className="w-full md:w-1/2 lg:full items-center mx-auto">
             <Box className="w-full sm:w-1/2 md:w-1/2 justify-end">
               <ChakraImage
                 src={"/Group-480.webp"}
@@ -204,15 +265,12 @@ export default function Home() {
                 Fixed Rates
               </Text>
               <Text className="text-xl" color="#2E1630">
-                We are much cheaper than the local âon-the-meterâ taxis in
+                We are much cheaper than the local ‘on-the-meter’ taxis in
                 Europe.
               </Text>
             </Box>
           </Box>
-          <Box
-            className="w-full md:w-1/2 lg:full items-center mx-auto"
-            style={{ marginRight: "25%" }}
-          >
+          <Box className="w-full md:w-1/2 lg:full items-center mx-auto">
             <Box className="w-full sm:w-1/2 md:w-1/2 justify-end">
               <ChakraImage
                 src={"/Group-476.webp"}
@@ -241,10 +299,7 @@ export default function Home() {
               </Text>
             </Box>
           </Box>
-          <Box
-            className="w-full md:w-1/2 lg:full items-center mx-auto"
-            style={{ marginRight: "50%" }}
-          >
+          <Box className="w-full md:w-1/2 lg:full items-center mx-auto">
             <Box className="w-full sm:w-1/2 md:w-1/2 justify-end">
               <ChakraImage
                 src={"/Group-477.webp"}

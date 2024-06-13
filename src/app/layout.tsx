@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ChakraProvider } from "@chakra-ui/react";
+import BasketProvider from "@/contexts/BasketContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,11 +22,13 @@ export default function RootLayout({
     <html lang="en">
       <body style={{ display: "flex", flexDirection: "column" }}>
         <ChakraProvider>
-          <div style={{ flex: 1 }}>
-            <Navbar />
-            {children}
-          </div>
-          <Footer />
+          <BasketProvider>
+            <div style={{ flex: 1 }}>
+              <Navbar />
+              {children}
+            </div>
+            <Footer />
+          </BasketProvider>
         </ChakraProvider>
       </body>
     </html>

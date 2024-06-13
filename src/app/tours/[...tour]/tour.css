@@ -1,0 +1,10 @@
+@media (min-width: 1024px) {
+  .image-tour {
+    width: 80%;
+    height: 90%;
+    margin-left: 10%;
+  }
+  .tour-header {
+    margin-left: 20%;
+  }
+}

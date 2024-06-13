@@ -1,6 +1,6 @@
 import React from "react";
 import { Image } from "@chakra-ui/react";
-const poi = () => {
+const Poi = () => {
   return (
     <div className="container mx-auto px-4 py-80">
       {" "}
@@ -48,4 +48,4 @@ const poi = () => {
   );
 };
 
-export default poi;
+export default Poi;

@@ -1,6 +1,6 @@
 import React from "react";
 import { Image } from "@chakra-ui/react";
-const contact = () => {
+const Contact = () => {
   return (
     <div className="container mx-auto px-4 py-80">
       <div className="flex flex-wrap -mx-4">
@@ -63,4 +63,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;

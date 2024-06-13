@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { ITransfers } from "@/firebase/dbschema";
-import { transfers as transfersFunc } from "@/firebase/home/dbquery";
-const transfers = () => {
+import { transfers as transfersFunc } from "@/firebase/queries/dbquery";
+const Transfers = () => {
   const [transfersState, setTransfers] = useState<ITransfers[]>([]);
 
   useEffect(() => {
@@ -69,8 +69,8 @@ const transfers = () => {
             <div className="w-3/4">
               <div className="bg-white p-4 shadow rounded-lg">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {transfersState.map((transfer) => (
-                    <div className="bg-white border rounded-lg p-4">
+                  {transfersState.map((transfer, key) => (
+                    <div className="bg-white border rounded-lg p-4" key={key}>
                       <img
                         alt="Car image for Athens to Airport up to 4 people taxi"
                         className="mb-4"
@@ -103,4 +103,4 @@ const transfers = () => {
   );
 };
 
-export default transfers;
+export default Transfers;

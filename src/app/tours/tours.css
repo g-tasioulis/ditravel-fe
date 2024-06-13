@@ -17,6 +17,7 @@ body {
   transition: background-color 0.3s;
 }
 
-.tab:hover::after {
+.tab:hover::after,
+.tab.active::after {
   background-color: black;
 }

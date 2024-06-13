@@ -1,6 +1,6 @@
 import React from "react";
 import { Image } from "@chakra-ui/react";
-const about = () => {
+const About = () => {
   return (
     <div className="about-section min-h-screen flex items-center justify-center px-8">
       <div className="max-w-4xl mx-auto">
@@ -32,4 +32,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;

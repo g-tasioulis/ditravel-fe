@@ -1,7 +1,7 @@
 import ButtonHover from "@/components/ButtonHover";
 import React, { useEffect, useState } from "react";
 import { IMultiDayTour, IOneDayTour } from "@/firebase/dbschema";
-import { multiDayTours, oneDayTours } from "@/firebase/home/dbquery";
+import { multiDayTours, oneDayTours } from "@/firebase/queries/dbquery";
 import "./tours.css";
 const ToursAgency = () => {
   const [oneDayTourState, setOneDayTours] = useState<IOneDayTour[]>([]);
@@ -44,8 +44,11 @@ const ToursAgency = () => {
             <div className="tour-column w-1/2 pr-4">
               <h2 className="text-xl font-semibold mb-2">One Day Tours</h2>
               <ul>
-                {oneDayTourState.map((tour) => (
-                  <li className="flex justify-between mb-1 hover-effect p-2 rounded">
+                {oneDayTourState.map((tour, key) => (
+                  <li
+                    className="flex justify-between mb-1 hover-effect p-2 rounded"
+                    key={key}
+                  >
                     <span>{tour.name}</span>
                     <a href="#" className="text-blue-600">
                       View Route
@@ -57,8 +60,11 @@ const ToursAgency = () => {
             <div className="tour-column w-1/2 pl-4">
               <h2 className="text-xl font-semibold mb-2">Multi Day Tours</h2>
               <ul>
-                {multiDayToursState.map((tour) => (
-                  <li className="flex justify-between mb-1 hover-effect p-2 rounded">
+                {multiDayToursState.map((tour, key) => (
+                  <li
+                    className="flex justify-between mb-1 hover-effect p-2 rounded"
+                    key={key}
+                  >
                     <span>{tour.name}</span>
                     <a href="#" className="text-blue-600">
                       View Route
